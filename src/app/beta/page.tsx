@@ -1,10 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import Features from "@/components/Features";
 import { Button } from "@/components/ui/button";
-import WaitlistForm from "@/components/WaitlistForm";
 
-export default function Home() {
+export const metadata = {
+  title: "Private Beta | MiniClue",
+  description: "Turn your lecture into your most powerful study guide",
+};
+
+export default function BetaPage() {
   return (
     <>
       <section className="pt-32">
@@ -14,7 +17,9 @@ export default function Home() {
               <span className="bg-chart-3 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></span>
               <span className="bg-chart-2 relative inline-flex size-2 rounded-full"></span>
             </span>
-            <span className="text-foreground text-sm">Waitlist is open</span>
+            <span className="text-foreground text-sm">
+              Private Beta: You&apos;re invited!
+            </span>
           </Button>
 
           <h1 className="mx-auto mb-8 max-w-4xl text-5xl leading-14 font-medium sm:text-6xl sm:leading-17">
@@ -27,10 +32,10 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 sm:flex-row">
             <Button asChild variant="default" size="lg">
-              <Link href="/#waitlist">Join the waitlist</Link>
+              <a href="https://app.miniclue.com/auth/signup">Start learning</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/#features">See our features</Link>
+              <a href="/beta#features">See our features</a>
             </Button>
           </div>
         </div>
@@ -60,36 +65,36 @@ export default function Home() {
             <Image
               src="/assets/ntu_logo.png"
               alt="NTU Logo"
-              width={400}
-              height={400}
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
             <Image
               src="/assets/nus_logo.png"
               alt="NUS Logo"
-              width={400}
-              height={400}
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
             <Image
               src="/assets/smu_logo.png"
               alt="SMU Logo"
-              width={400}
-              height={400}
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
             <Image
               src="/assets/oxford_logo.svg"
               alt="Oxford Logo"
-              width={400}
-              height={400}
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
             <Image
               src="/assets/cambridge_logo.png"
               alt="Cambridge Logo"
-              width={400}
-              height={400}
+              width={64}
+              height={64}
               className="h-16 w-auto"
             />
           </div>
@@ -100,17 +105,19 @@ export default function Home() {
         <Features />
       </section>
 
-      <section id="waitlist" className="pt-24 pb-12">
+      <section className="pt-24">
         <div className="mx-auto max-w-7xl px-6 py-20 text-center">
           <h2 className="text-center text-5xl font-medium md:text-6xl lg:text-7xl">
-            Get early access
+            Learn faster.
+            <br /> Understand better.
           </h2>
-          <p className="mx-auto mt-5 max-w-xl">
-            We&apos;re currently sending out invites for early access. Join the
-            waitlist to secure your spot and be among the first to try MiniClue.
-          </p>
-
-          <WaitlistForm />
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Button asChild variant="default" size="lg">
+              <a href="https://app.miniclue.com/auth/signup">
+                <span>Start learning</span>
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </>
