@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <footer className="w-full">
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col flex-wrap justify-between gap-6 px-6 py-10 sm:flex-row sm:items-end">
+      <div className="page-container mx-auto mt-12 flex flex-col flex-wrap justify-between gap-6 py-10 sm:flex-row sm:items-end">
         <span className="text-muted-foreground block text-center text-sm">
-          © {new Date().getFullYear()} MiniClue
+          © MiniClue {new Date().getFullYear()}
         </span>
         <div className="order-first flex flex-wrap justify-center gap-6 text-sm sm:order-last">
           <a

@@ -1,0 +1,166 @@
+---
+title: "MiniClue is now Generally Available"
+summary: "Upload your lecture PDFs and chat with them — MiniClue is now out of private beta, open-source, and BYOK."
+publishedAt: "2026-01-01"
+authorName: "Louis"
+authorRole: "MiniClue Founder"
+authorAvatar: "/blog/authors/louis.jpg"
+authorWebsite: "https://www.srleom.me"
+---
+
+Today, I’m excited to share that MiniClue is **officially out of private beta** and now **generally available**.
+
+If you’re a student who’s ever wished you could just talk to your lecture slides without juggling tabs, MiniClue is built for you.
+
+[Try MiniClue today.](https://app.miniclue.com/auth/signup)
+
+<Image
+  src="/blog/ga/new-miniclue.png"
+  alt="MiniClue in GA"
+  caption="MiniClue 1.0 in General Availability"
+  width={2000}
+  height={2000}
+/>
+
+---
+
+## How MiniClue started
+
+MiniClue was my Year 1 university summer project. I spent 3 months - working every day from late May to early August 2025 - building the app.
+
+When I first started, the goal was simple: to build an AI lecture explainer.
+
+I built MiniClue to solve a simple problem I faced in my first year of university - the repetitiveness of constantly screenshotting my lecture slides, pasting it into ChatGPT and asking for an explanation.
+
+During the semester, I had tried hacking together a Python script to parse my lecture PDF into individual images and call the ChatGPT API for explanations. But the UX was terrible, and it didn't feel like something I'd actually stick with.
+
+In my mind, the ideal interface for this purpose would be a split-screen interface, with the lecture slides on the left and the explanations on the right. As I scrolled through my slides, the corresponding explanation would render. This way, I could read the slides and easily refer to the explanations when I encountered something I didn't understand.
+
+And so, over the summer of 2025, I brought this vision to life.
+
+<Image
+  src="/blog/ga/old-miniclue.png"
+  alt="MiniClue in Private Beta"
+  caption="MiniClue 0.1 in Private Beta"
+  width={2000}
+  height={2000}
+/>
+
+---
+
+## The private beta launch
+
+In August 2025, I launched the MiniClue private beta with a simple LinkedIn post. To my surprise, the post went mini-viral.
+
+Within 3 days, the post got **30,000+ impressions** and reached over **17,000 LinkedIn members**. I also received tons of connection requests asking for early access. To date, **more than 85 people** have signed up for the waitlist.
+
+It felt like a strong signal that the problem was real and that lots of students wanted a better workflow than “screenshot → paste → pray”.
+
+<Image
+  src="/blog/ga/linkedin-stats.png"
+  alt="LinkedIn Private Beta launch post stats"
+  caption="LinkedIn Private Beta launch post stats"
+  width={400}
+  height={50}
+/>
+
+### The retention problem
+
+I onboarded around 40 people into the private beta. The initial feedback was encouraging, and many found the app "useful" and "cool".
+
+But then… few people stuck around after using the app for a few days.
+
+<Image
+  src="/blog/ga/retention-stats.png"
+  alt="Private beta unique sessions stats"
+  caption="Private beta unique session stats"
+  width={1000}
+  height={1000}
+/>
+
+And that's when I realised the problem: **the generated explanations weren’t great**.
+
+Even with prompt engineering, the results were inconsistent. Some slides were over-explained, others under-explained, and many explanations just missed the point of the slide.
+
+The real issue, I realised, was that the slide-by-slide “auto-generate explanations" UX left no room for the student to specify what they actually needed.
+
+There was only one general prompt for all slides, no user input per slide and no way to ask for clarifications.
+
+So the model had to guess what mattered on each slide. Naturally, it missed the mark.
+
+### The obvious solution
+
+The solution became clear: **Let users ask questions.**
+
+Instead of forcing explanations onto students, let them pull answers only when they need them. Chat became the natural interface for that.
+
+And once chat existed, everything else clicked - follow-up questions, quiz generation, and summaries that actually reflect what the student cared about.
+
+---
+
+## Introducing MiniClue 1.0, the AI chat experience for your lecture slides
+
+Over the past 2 months (Nov - Dec 2025), I rebuilt MiniClue around the chat experience. I also removed the old explanations and summary generation features, because I found them redundant now that the chat UX was good.
+
+Instead of auto-generating content you may not even want, MiniClue now focuses on understanding your knowledge gaps and helping you learn faster.
+
+### Key changes made
+
+- **Chat-first experience**: Support for models from major providers (Gemini, OpenAI, Anthropic, and xAI).
+- **Split-scren interface**: The PDF stays on the left and the chat on the right - no more toggling between tabs.
+- **`@Current Slide` shortcut**: Instantly share a screenshot of the slide you’re seeing with the LLM to provide instant context.
+- **Saved lectures and chats**: Jump back into any lecture and pick up the conversation exactly where you left off.
+
+<Image
+  src="/blog/ga/new-miniclue-features.png"
+  alt="New MiniClue features"
+  caption="New MiniClue features"
+  width={1000}
+  height={1000}
+/>
+
+---
+
+## What's next for MiniClue
+
+MiniClue is a project by students, for students.
+
+Our goal is simple: to build the **best AI chat experience for your lecture slides**.
+
+To keep MiniClue **free and accessible to all**, I'm doing two things:
+
+1. I'm **open-sourcing** MiniClue.
+
+If you’re:
+
+- A **developer** interested in adding features
+- A **designer** who cares about learning UX
+- A **marketer** who wants to help students discover better tools
+
+Write to me on [LinkedIn](https://www.linkedin.com/in/srleom/).
+
+I've also written extensive [developer documentation](https://PLACEHOLDER.com) to make contributing straightforward. If you'd like to work on a production-ready RAG codebase, this is the project for you.
+
+2. I'm transitioning to a **Bring Your Own Key (BYOK)** model.
+
+In private beta, MiniClue covered all LLM API costs. In MiniClue 1.0, I'm moving to a BYOK model to keep MiniClue free for all.
+
+What this means for you:
+
+- No monthly subscriptions
+- No wasted credits
+- You only pay for what you use
+
+Simply connect your Google Gemini API key to MiniClue and you're good to go.
+
+The best part is that Google Gemini has a generous free tier. Since MiniClue uses Gemini for lecture processing, most users can use MiniClue essentially for free.
+
+---
+
+## Try MiniClue today
+
+MiniClue is now live for everyone. Try it [here](https://app.miniclue.com/auth/signup).
+
+Thanks for being a part of the journey. This is just the beginning.
+
+P.S. If you try it, I’d genuinely love your feedback. You can DM me on [LinkedIn](https://www.linkedin.com/in/srleom/).
