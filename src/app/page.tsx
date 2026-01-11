@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import Features from "@/components/features";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import LogoCloud from "@/components/logo-cloud";
