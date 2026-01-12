@@ -45,7 +45,7 @@ export function MobileNav() {
           <div
             className={cn(
               "bg-background/95 supports-backdrop-filter:bg-background/50 backdrop-blur-sm",
-              "fixed top-14 right-0 bottom-0 left-0 z-40 flex flex-col overflow-hidden border-t md:hidden",
+              "fixed top-[calc(3.5rem+var(--banner-height,0px))] right-0 bottom-0 left-0 z-40 flex flex-col overflow-hidden border-t md:hidden",
             )}
             id="mobile-menu"
           >

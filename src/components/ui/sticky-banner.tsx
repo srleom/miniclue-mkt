@@ -1,5 +1,5 @@
 "use client";
-import React, { SVGProps, useState } from "react";
+import React, { SVGProps, useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValueEvent,
@@ -24,6 +24,7 @@ export const StickyBanner = ({
   const [open, setOpen] = useState(!isInitiallyDismissed);
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   const handleClose = () => {
     setOpen(false);
@@ -40,10 +41,31 @@ export const StickyBanner = ({
     }
   });
 
+  useEffect(() => {
+    const banner = bannerRef.current;
+    if (!banner || !open || !isVisible) {
+      document.documentElement.style.setProperty("--banner-height", "0px");
+      return;
+    }
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        document.documentElement.style.setProperty(
+          "--banner-height",
+          `${(entry.target as HTMLElement).offsetHeight}px`,
+        );
+      }
+    });
+
+    observer.observe(banner);
+    return () => observer.disconnect();
+  }, [open, isVisible]);
+
   return (
     <AnimatePresence initial={false}>
       {open && isVisible && (
         <motion.div
+          ref={bannerRef}
           className={cn(
             "relative flex min-h-10 w-full items-center justify-center overflow-hidden bg-transparent px-4 py-1",
             className,
