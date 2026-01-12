@@ -82,7 +82,7 @@ export default function HomePage() {
       <section className="pt-30">
         <div className="page-container py-20 text-center">
           <h2 className="text-center text-5xl font-medium lg:text-7xl">
-            By students, for students
+            For students, by students
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-neutral-500 dark:text-neutral-300">
