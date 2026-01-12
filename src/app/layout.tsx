@@ -120,7 +120,7 @@ export default async function RootLayout({
               <span className="hidden sm:inline">
                 <span className="font-medium">MiniClue 1.0</span> is here.{" "}
                 <Link
-                  href="/blog/ga"
+                  href="/blog/launch"
                   className="transition duration-200 hover:underline"
                 >
                   Read the announcement
@@ -129,7 +129,7 @@ export default async function RootLayout({
               </span>
               <span className="sm:hidden">
                 <Link
-                  href="/blog/ga"
+                  href="/blog/launch"
                   className="transition duration-200 hover:underline"
                 >
                   <span className="font-medium">MiniClue 1.0</span> is here.
