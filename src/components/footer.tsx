@@ -9,7 +9,7 @@ export default function Footer() {
         </span>
         <div className="order-first flex flex-wrap justify-center gap-6 text-sm sm:order-last">
           <Link
-            href="https://github.com/miniclue/miniclue-info"
+            href="https://github.com/srleom/miniclue"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary block"

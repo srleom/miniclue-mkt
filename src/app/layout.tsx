@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
+import { cookies } from "next/headers";
+import Link from "next/link";
 import { baseUrl } from "@/app/sitemap";
+import Footer from "@/components/footer";
 import { Header } from "@/components/header";
 import { StickyBanner } from "@/components/ui/sticky-banner";
-import Link from "next/link";
-import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -107,6 +107,11 @@ export default async function RootLayout({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          defer
+          src="https://analytics.srleom.me/script.js"
+          data-website-id="97223764-ca33-487c-a4dd-79c82a47e795"
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}

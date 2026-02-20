@@ -38,7 +38,7 @@ export default function Features() {
         "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },
     {
-      title: "Bring your preferred model",
+      title: "Bring your preferred models",
       description:
         "MiniClue supports models from all major providers including Gemini, OpenAI, Anthropic, and xAI.",
       skeleton: <ModelProviders />,
