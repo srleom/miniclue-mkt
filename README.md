@@ -16,7 +16,7 @@ The Next.js landing page for the MiniClue platform. It showcases the product fea
 
 ## 🚀 Quick Start
 
-> See [CONTRIBUTING.md](https://github.com/miniclue/miniclue-info/blob/main/CONTRIBUTING.md) for full details on how to setup and contribute to the project.
+> See [CONTRIBUTING.md](https://github.com/srleom/miniclue?tab=contributing-ov-file) for full details on how to setup and contribute to the project.
 
 1. **Fork & Clone**
 
