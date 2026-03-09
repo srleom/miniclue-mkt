@@ -38,7 +38,7 @@ export default function HomePage() {
 
 					<div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 sm:flex-row">
 						<Button asChild variant="default" size="lg">
-							<Link href="/download">Download MiniClue (it&apos;s free!)</Link>
+							<Link href="/download">Download (it&apos;s free!)</Link>
 						</Button>
 						<Button asChild variant="outline" size="lg">
 							<Link href="#features">See our features</Link>
@@ -103,8 +103,8 @@ export default function HomePage() {
 
 					<div className="mt-12 flex flex-wrap justify-center gap-3">
 						<Button asChild variant="default" size="lg">
-							<Link href="/download">
-								<span>Download MiniClue (it&apos;s free!)</span>
+							<Link href="#">
+								<span>Download (it&apos;s free!)</span>
 							</Link>
 						</Button>
 						<Button asChild variant="outline" size="lg">
