@@ -65,13 +65,8 @@ export function Header() {
 							{link.label}
 						</Link>
 					))}
-					<Button variant="outline" className="ml-3" asChild>
-						<Link href="https://app.miniclue.com/auth/login">Login</Link>
-					</Button>
 					<Button asChild>
-						<Link href="https://app.miniclue.com/auth/signup">
-							Start learning
-						</Link>
+						<Link href="#">Download</Link>
 					</Button>
 				</div>
 				<MobileNav />
