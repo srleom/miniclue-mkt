@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import type React from "react";
+import { cn } from "@/lib/utils";
 import { HighlightText } from "./animate-ui/primitives/texts/highlight";
 
 export default function Features() {
@@ -59,8 +59,8 @@ export default function Features() {
         </h4>
 
         <p className="mx-auto my-4 max-w-2xl text-center text-sm font-normal text-neutral-500 lg:text-base dark:text-neutral-300">
-          Everything you need to understand any document, built into one seamless
-          workspace.
+          Everything you need to understand any document, built into one
+          seamless workspace.
         </p>
       </div>
 

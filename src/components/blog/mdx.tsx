@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { highlight } from "sugar-high";
 import React from "react";
+import { highlight } from "sugar-high";
 
 type TableData = {
   headers: string[];
@@ -99,8 +99,8 @@ function slugify(str: string | React.ReactNode): string {
     .trim() // Remove whitespace from both ends of a string
     .replace(/\s+/g, "-") // Replace spaces with -
     .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .replace(/[^\w-]+/g, "") // Remove all non-word characters except for -
+    .replace(/--+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(level: number) {

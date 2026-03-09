@@ -1,11 +1,12 @@
 "use client";
-import React, { SVGProps, useEffect, useRef, useState } from "react";
 import {
+  AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
-  AnimatePresence,
 } from "motion/react";
+import type React from "react";
+import { type SVGProps, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const BANNER_STORAGE_KEY = "miniclue-banner-dismissed";

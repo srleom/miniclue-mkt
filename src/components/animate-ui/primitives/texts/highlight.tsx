@@ -1,9 +1,9 @@
 "use client";
 
-import * as React from "react";
-import { motion, type HTMLMotionProps } from "motion/react";
+import { type HTMLMotionProps, motion } from "motion/react";
+import type * as React from "react";
 
-import { useIsInView, type UseIsInViewOptions } from "@/hooks/use-is-in-view";
+import { type UseIsInViewOptions, useIsInView } from "@/hooks/use-is-in-view";
 import { cn } from "@/lib/utils";
 
 type HighlightTextProps = Omit<HTMLMotionProps<"span">, "children"> & {
