@@ -5,6 +5,7 @@ import { MobileNav } from "@/components/mobile-nav";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const navLinks = [
   {
@@ -30,8 +31,7 @@ export function Header() {
             className="flex items-center gap-2 text-lg font-medium"
             aria-label="Homepage"
           >
-            <Sparkle size={20} />
-            <span>MiniClue</span>
+            <Image src="/miniclue_logo.svg" alt="MiniClue" width={100} height={100} />
           </Link>
         </div>
         <div className="hidden items-center gap-2 md:flex">

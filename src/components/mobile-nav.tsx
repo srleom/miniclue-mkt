@@ -10,7 +10,7 @@ export function MobileNav() {
   const [open, setOpen] = React.useState(false);
   const { isMobile } = useMediaQuery();
 
-  // 🚫 Disable body scroll when open
+  // Disable body scroll when open
   React.useEffect(() => {
     if (open && isMobile) {
       document.body.style.overflow = "hidden";
