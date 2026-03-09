@@ -56,14 +56,14 @@ function MDXImage({
   src,
   alt,
   caption,
-  width,
-  height,
+  width = 2000,
+  height = 2000,
 }: {
   src: string;
   alt: string;
   caption: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }) {
   return (
     <figure style={{ margin: "2rem 0", textAlign: "center" }}>
