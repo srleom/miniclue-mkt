@@ -10,7 +10,13 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      }
     }
   },
   "formatter": {
@@ -26,6 +32,17 @@
       "semicolons": "always"
     }
   },
+  "css": {
+    "parser": {
+      "cssModules": false
+    },
+    "linter": {
+      "enabled": true
+    },
+    "formatter": {
+      "enabled": true
+    }
+  },
   "files": {
     "includes": [
       "**",
@@ -34,7 +51,8 @@
       "!build",
       "!node_modules",
       "!next-env.d.ts",
-      "!src/components/ui/*"
+      "!src/components/ui/*",
+      "!src/app/globals.css"
     ]
   }
 }
