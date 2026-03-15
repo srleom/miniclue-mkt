@@ -1,16 +1,17 @@
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { createPortal } from "react-dom";
 import { navLinks } from "@/components/header";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
   const { isMobile } = useMediaQuery();
 
-  // 🚫 Disable body scroll when open
+  // Disable body scroll when open
   React.useEffect(() => {
     if (open && isMobile) {
       document.body.style.overflow = "hidden";
@@ -71,10 +72,9 @@ export function MobileNav() {
                 ))}
               </div>
               <div className="mt-12 flex flex-col gap-2">
-                <Button className="w-full" variant="outline">
-                  Sign In
+                <Button asChild className="w-full">
+                  <Link href="#">Coming soon</Link>
                 </Button>
-                <Button className="w-full">Get Started</Button>
               </div>
             </div>
           </div>,

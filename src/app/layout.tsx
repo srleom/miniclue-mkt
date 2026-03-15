@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { cookies } from "next/headers";
-import Link from "next/link";
+// import { cookies } from "next/headers";
+// import Link from "next/link";
 import { baseUrl } from "@/app/sitemap";
 import Footer from "@/components/footer";
 import { Header } from "@/components/header";
-import { StickyBanner } from "@/components/ui/sticky-banner";
+// import { StickyBanner } from "@/components/ui/sticky-banner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,9 +88,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const isBannerDismissed =
-    cookieStore.get("miniclue-banner-dismissed")?.value === "true";
+  // const cookieStore = await cookies();
+  // const isBannerDismissed =
+  //   cookieStore.get("miniclue-banner-dismissed")?.value === "true";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -117,7 +117,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
       >
         <div className="sticky top-0 z-50 flex w-full flex-col">
-          <StickyBanner
+          {/* <StickyBanner
             className="bg-muted"
             isInitiallyDismissed={isBannerDismissed}
           >
@@ -141,7 +141,7 @@ export default async function RootLayout({
                 </Link>
               </span>
             </p>
-          </StickyBanner>
+          </StickyBanner> */}
           <Header />
         </div>
         <main className="flex-1">{children}</main>

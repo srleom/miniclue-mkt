@@ -1,13 +1,13 @@
-import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CustomMDX } from "@/components/blog/mdx";
+import { notFound } from "next/navigation";
 import {
   formatDate,
   getBlogPosts,
   getPublishedBlogPosts,
 } from "@/app/blog/utils";
 import { baseUrl } from "@/app/sitemap";
+import { CustomMDX } from "@/components/blog/mdx";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export async function generateStaticParams() {
   const posts = getPublishedBlogPosts();

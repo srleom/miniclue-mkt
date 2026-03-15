@@ -6,6 +6,7 @@ const isProductionDomain =
   window.location.origin === "https://www.miniclue.com";
 
 if (isProductionDomain) {
+  // biome-ignore lint/style/noNonNullAssertion: env var is required
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
     api_host: "/relay-xYmY",
     ui_host: "https://us.posthog.com",

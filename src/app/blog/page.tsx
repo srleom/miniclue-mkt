@@ -1,6 +1,6 @@
-import { BlogPosts } from "@/components/blog/posts";
 import type { Metadata } from "next";
 import { baseUrl } from "@/app/sitemap";
+import { BlogPosts } from "@/components/blog/posts";
 
 export const metadata: Metadata = {
   title: "Blog",

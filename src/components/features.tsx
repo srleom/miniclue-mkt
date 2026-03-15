@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import type React from "react";
+import { cn } from "@/lib/utils";
 import { HighlightText } from "./animate-ui/primitives/texts/highlight";
 
 export default function Features() {
@@ -10,7 +10,7 @@ export default function Features() {
     {
       title: "Read and chat in one view",
       description:
-        "Our split-screen interface keeps your lecture on the left and AI tutor on the right.",
+        "Our split-screen interface keeps your document on the left and AI assistant on the right.",
       skeleton: <SplitScreenInterface />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
@@ -21,7 +21,7 @@ export default function Features() {
         <>
           Type{" "}
           <code className="rounded-md bg-neutral-100 px-1 py-0.5 font-mono text-sm dark:bg-neutral-800">
-            @Current Slide
+            @Current Page
           </code>{" "}
           to instantly share a screenshot of exactly what you’re looking at.
         </>
@@ -30,10 +30,10 @@ export default function Features() {
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Quiz yourself on the fly",
+      title: "Your data never leaves your machine",
       description:
-        "Challenge your understanding by asking MiniClue to test you on the current lecture.",
-      skeleton: <Quiz />,
+        "MiniClue runs locally on your desktop. Your documents are never uploaded to our servers.",
+      skeleton: <DataPrivacy />,
       className:
         "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },
@@ -49,7 +49,7 @@ export default function Features() {
     <div className="relative z-20 mx-auto max-w-7xl">
       <div className="px-8">
         <h4 className="mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-black lg:text-5xl lg:leading-tight dark:text-white">
-          Study{" "}
+          Read{" "}
           <HighlightText
             text="smarter"
             highlightColor="rgba(59, 130, 246, 0.2)"
@@ -59,8 +59,8 @@ export default function Features() {
         </h4>
 
         <p className="mx-auto my-4 max-w-2xl text-center text-sm font-normal text-neutral-500 lg:text-base dark:text-neutral-300">
-          Everything you need to master your lecture, built into one seamless
-          workspace.
+          Everything you need to understand any document, built into one
+          seamless workspace.
         </p>
       </div>
 
@@ -145,12 +145,12 @@ export const InstantContext = () => {
   );
 };
 
-export const Quiz = () => {
+export const DataPrivacy = () => {
   return (
     <div className="mt-5 w-full">
       <Image
-        src="/home/quiz.png"
-        alt="Quiz"
+        src="/home/data-privacy.png"
+        alt="Data privacy"
         width={1400}
         height={800}
         className="h-auto w-full rounded-md shadow-md blur-none transition-all duration-200 group-hover/image:blur-md"
