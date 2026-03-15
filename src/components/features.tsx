@@ -21,9 +21,9 @@ export default function Features() {
         <>
           Type{" "}
           <code className="rounded-md bg-neutral-100 px-1 py-0.5 font-mono text-sm dark:bg-neutral-800">
-            @Current Page
+            @
           </code>{" "}
-          to instantly share a screenshot of exactly what you’re looking at.
+          to share screenshots of the pages you want the AI assistant to see.
         </>
       ),
       skeleton: <InstantContext />,
