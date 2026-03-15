@@ -18,11 +18,21 @@ function parseFrontmatter(fileContent: string) {
   const match = frontmatterRegex.exec(fileContent);
   const frontMatterBlock = match?.[1];
   const content = fileContent.replace(frontmatterRegex, "").trim();
+
+  if (!frontMatterBlock) {
+    return { metadata: {} as Metadata, content };
+  }
+
   const frontMatterLines = frontMatterBlock.trim().split("\n");
   const metadata: Partial<Metadata> = {};
 
   frontMatterLines.forEach((line) => {
     const [key, ...valueArr] = line.split(": ");
+
+    if (!key || valueArr.length === 0) {
+      return;
+    }
+
     let value = valueArr.join(": ").trim();
     value = value.replace(/^['"](.*)['"]$/, "$1"); // Remove quotes
     const trimmedKey = key.trim() as keyof Metadata;
