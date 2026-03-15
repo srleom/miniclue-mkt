@@ -1,4 +1,5 @@
 import { MenuIcon, XIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { createPortal } from "react-dom";
 import { navLinks } from "@/components/header";
@@ -71,7 +72,9 @@ export function MobileNav() {
                 ))}
               </div>
               <div className="mt-12 flex flex-col gap-2">
-                <Button className="w-full">Download</Button>
+                <Button asChild className="w-full">
+                  <Link href="#">Coming soon</Link>
+                </Button>
               </div>
             </div>
           </div>,

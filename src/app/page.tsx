@@ -38,7 +38,7 @@ export default function HomePage() {
 
           <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 sm:flex-row">
             <Button asChild variant="default" size="lg">
-              <Link href="/download">Download (it&apos;s free!)</Link>
+              <Link href="#">Coming soon</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="#features">See our features</Link>
@@ -104,14 +104,14 @@ export default function HomePage() {
           <div className="mt-12 flex flex-wrap justify-center gap-3">
             <Button asChild variant="default" size="lg">
               <Link href="#">
-                <span>Download (it&apos;s free!)</span>
+                <span>Coming soon</span>
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            {/* <Button asChild variant="outline" size="lg">
               <Link href="/blog">
                 <span>Read the blog</span>
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
