@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { HighlightText } from "@/components/animate-ui/primitives/texts/highlight";
 import Features from "@/components/features";
+import { HeroCta } from "@/components/hero-cta";
 import LogoCloud from "@/components/logo-cloud";
 import { Button } from "@/components/ui/button";
+import WaitlistForm from "@/components/waitlist-form";
 
 export const metadata = {
   title: "Home | MiniClue",
@@ -36,14 +37,7 @@ export default function HomePage() {
             for any document, privately. Your files never leave your machine.
           </p>
 
-          <div className="flex flex-col items-center justify-center gap-x-4 gap-y-3 sm:flex-row">
-            <Button asChild variant="default" size="lg">
-              <Link href="#">Coming soon</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="#features">See our features</Link>
-            </Button>
-          </div>
+          <HeroCta />
         </div>
       </section>
 
@@ -77,7 +71,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pt-30">
+      <section className="pt-30" id="waitlist">
         <div className="page-container py-20 text-center">
           <h2 className="text-center text-5xl max-w-md  mx-auto font-medium lg:max-w-2xl lg:text-7xl">
             Built for anyone who reads and{" "}
@@ -101,17 +95,8 @@ export default function HomePage() {
 						— just plug in your API key and start today.
 					</p> */}
 
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
-            <Button asChild variant="default" size="lg">
-              <Link href="#">
-                <span>Coming soon</span>
-              </Link>
-            </Button>
-            {/* <Button asChild variant="outline" size="lg">
-              <Link href="/blog">
-                <span>Read the blog</span>
-              </Link>
-            </Button> */}
+          <div className="mt-12 flex flex-wrap justify-center">
+            <WaitlistForm />
           </div>
         </div>
       </section>
