@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
@@ -39,7 +38,7 @@ export default function LogoCloud() {
             >
               {logos.map((logo) => (
                 <div className="flex" key={logo.src}>
-                  <Image
+                  <img
                     className="mx-auto h-10 w-auto dark:invert"
                     src={logo.src}
                     alt={logo.alt}

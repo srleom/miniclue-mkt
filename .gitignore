@@ -13,9 +13,15 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# vite / tanstack start
+/dist
+/.output
+/.tanstack
+src/routeTree.gen.ts
+
+# cloudflare
+.wrangler
+worker-configuration.d.ts
 
 # production
 /build
@@ -33,12 +39,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# vercel
-.vercel
-
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # vscode
 .vscode
+
+# claude
+.claude/*

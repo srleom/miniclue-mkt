@@ -1,8 +1,8 @@
 import { MenuIcon, XIcon } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 import { createPortal } from "react-dom";
-import { navLinks } from "@/components/header";
+import { DOWNLOAD_URL, navLinks } from "@/components/header";
+import { AppleIcon } from "@/components/icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
@@ -72,9 +72,13 @@ export function MobileNav() {
                 ))}
               </div>
               <div className="mt-12 flex flex-col gap-2">
-                <Button asChild className="w-full">
-                  <Link href="#">Coming soon</Link>
-                </Button>
+                <a
+                  href={DOWNLOAD_URL}
+                  className={cn(buttonVariants(), "w-full gap-2")}
+                >
+                  <AppleIcon className="size-4" />
+                  Download for Apple Silicon
+                </a>
               </div>
             </div>
           </div>,

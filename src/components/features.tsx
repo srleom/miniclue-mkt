@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import type React from "react";
 import { cn } from "@/lib/utils";
 import { HighlightText } from "./animate-ui/primitives/texts/highlight";
@@ -118,13 +115,12 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SplitScreenInterface = () => {
   return (
     <div className="mt-5 w-full">
-      <Image
+      <img
         src="/home/split-screen.png"
         alt="Dual screen"
         width={1400}
         height={800}
         className="h-auto w-full rounded-md shadow-md blur-none transition-all duration-200 group-hover/image:blur-md"
-        priority
       />
     </div>
   );
@@ -133,13 +129,12 @@ export const SplitScreenInterface = () => {
 export const InstantContext = () => {
   return (
     <div className="mt-5 w-full">
-      <Image
+      <img
         src="/home/instant-context.png"
         alt="Instant context"
         width={1400}
         height={800}
         className="h-auto w-full rounded-md shadow-md blur-none transition-all duration-200 group-hover/image:blur-md"
-        priority
       />
     </div>
   );
@@ -148,13 +143,12 @@ export const InstantContext = () => {
 export const DataPrivacy = () => {
   return (
     <div className="mt-5 w-full">
-      <Image
+      <img
         src="/home/data-privacy.png"
         alt="Data privacy"
         width={1400}
         height={800}
         className="h-auto w-full rounded-md shadow-md blur-none transition-all duration-200 group-hover/image:blur-md"
-        priority
       />
     </div>
   );
@@ -163,13 +157,12 @@ export const DataPrivacy = () => {
 export const ModelProviders = () => {
   return (
     <div className="mt-5 w-full">
-      <Image
+      <img
         src="/home/model-providers.png"
         alt="Providers"
         width={1400}
         height={800}
         className="h-auto w-full rounded-md shadow-md blur-none transition-all duration-200 group-hover/image:blur-md"
-        priority
       />
     </div>
   );

@@ -1,17 +1,27 @@
-import Image from "next/image";
+import { createFileRoute } from "@tanstack/react-router";
 import { HighlightText } from "@/components/animate-ui/primitives/texts/highlight";
 import Features from "@/components/features";
+import { DOWNLOAD_URL } from "@/components/header";
 import { HeroCta } from "@/components/hero-cta";
+import { AppleIcon } from "@/components/icons";
 import LogoCloud from "@/components/logo-cloud";
-import { Button } from "@/components/ui/button";
-import WaitlistForm from "@/components/waitlist-form";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-export const metadata = {
-  title: "Home | MiniClue",
-  description: "Turn any document into an interactive conversation",
-};
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Home | MiniClue" },
+      {
+        name: "description",
+        content: "Turn any document into an interactive conversation",
+      },
+    ],
+  }),
+  component: HomePage,
+});
 
-export default function HomePage() {
+function HomePage() {
   return (
     <>
       <section className="pt-32">
@@ -44,13 +54,12 @@ export default function HomePage() {
       <section className="pt-24">
         <div className="page-container">
           <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
-            <Image
+            <img
               src="/home/hero.png"
               alt="MiniClue"
               width={1920}
               height={1080}
               className="w-full object-top"
-              priority
             />
           </div>
         </div>
@@ -71,7 +80,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pt-30" id="waitlist">
+      <section className="pt-30" id="download">
         <div className="page-container py-20 text-center">
           <h2 className="text-center text-5xl max-w-md  mx-auto font-medium lg:max-w-2xl lg:text-7xl">
             Built for anyone who reads and{" "}
@@ -82,21 +91,14 @@ export default function HomePage() {
             />{" "}
           </h2>
 
-          {/* <p className="mx-auto mt-6 max-w-2xl text-neutral-500 dark:text-neutral-300">
-						We built MiniClue because reading and understanding should happen in
-						the same place — with your data staying exactly where it belongs.
-						It&apos;s{" "}
-						<HighlightText
-							text="100% free to use"
-							highlightColor="rgba(34, 197, 94, 0.3)"
-							delay={100}
-							style={{ fontWeight: "600" }}
-						/>{" "}
-						— just plug in your API key and start today.
-					</p> */}
-
           <div className="mt-12 flex flex-wrap justify-center">
-            <WaitlistForm />
+            <a
+              href={DOWNLOAD_URL}
+              className={cn(buttonVariants({ size: "lg" }), "gap-2")}
+            >
+              <AppleIcon className="size-4" />
+              Download for Apple Silicon
+            </a>
           </div>
         </div>
       </section>
