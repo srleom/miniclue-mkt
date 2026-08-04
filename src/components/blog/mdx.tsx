@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 import { highlight } from "sugar-high";
 
@@ -34,24 +31,19 @@ function Table({ data }: { data: TableData }) {
 function CustomLink(
   props: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string },
 ) {
-  const { href, children, ...rest } = props;
-
-  if (href.startsWith("/")) {
-    return (
-      <Link href={href} {...rest}>
-        {children}
-      </Link>
-    );
-  }
+  const { href, ...rest } = props;
 
   if (href.startsWith("#")) {
-    return <a {...props} />;
+    return <a href={href} {...rest} />;
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  if (href.startsWith("/")) {
+    return <a href={href} {...rest} />;
+  }
+
+  return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />;
 }
 
-// components/MDXImage.js
 function MDXImage({
   src,
   alt,
@@ -67,7 +59,7 @@ function MDXImage({
 }) {
   return (
     <figure style={{ margin: "2rem 0", textAlign: "center" }}>
-      <Image
+      <img
         src={src}
         alt={alt}
         width={width}
@@ -96,11 +88,11 @@ function slugify(str: string | React.ReactNode): string {
   return strValue
     .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w-]+/g, "") // Remove all non-word characters except for -
-    .replace(/--+/g, "-"); // Replace multiple - with single -
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/&/g, "-and-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
 }
 
 function createHeading(level: number) {
@@ -125,7 +117,7 @@ function createHeading(level: number) {
   return Heading;
 }
 
-const components = {
+export const mdxComponents = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -137,12 +129,3 @@ const components = {
   code: Code,
   Table,
 };
-
-export function CustomMDX(props: React.ComponentProps<typeof MDXRemote>) {
-  return (
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-    />
-  );
-}

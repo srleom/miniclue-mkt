@@ -1,0 +1,1 @@
+After making code changes, always run `bun run verify`. This runs formatting, linting/checking (Biome), and TypeScript type-checking in one step. Fix all issues it reports before considering the change complete.

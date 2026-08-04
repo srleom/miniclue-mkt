@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { formatDate, getPublishedBlogPosts } from "@/app/blog/utils";
+import { Link } from "@tanstack/react-router";
+import { formatDate, getPublishedBlogPosts } from "@/lib/blog";
 
 export function BlogPosts() {
   const allBlogs = getPublishedBlogPosts();
@@ -25,7 +25,8 @@ export function BlogPosts() {
           <Link
             key={post.slug}
             className="mb-4 flex flex-col space-y-1 transition-all hover:text-neutral-600 dark:hover:text-neutral-400"
-            href={`/blog/${post.slug}`}
+            to="/blog/$slug"
+            params={{ slug: post.slug }}
           >
             <div className="flex w-full flex-col space-x-0 md:flex-row md:items-center md:space-x-2">
               <p className="min-w-[120px] text-neutral-600 dark:text-neutral-400">
