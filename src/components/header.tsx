@@ -13,7 +13,7 @@ export const navLinks = [
 ];
 
 export const DOWNLOAD_URL =
-  "https://github.com/miniclue/miniclue-desktop/releases/latest/download/MiniClue.dmg";
+  "https://github.com/miniclue/miniclue-desktop/releases/latest/download/miniclue.dmg";
 
 export function Header() {
   const scrolled = useScroll(10);
